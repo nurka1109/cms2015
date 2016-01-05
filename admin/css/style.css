@@ -496,6 +496,9 @@ hr { border-top-color: #edeaee; border-bottom: 1px solid #ffffff; margin:12px 0;
 	padding: 2px 6px;
 }
 .btn-group.open .btn.dropdown-toggle,
+.btn:hover,
+.btn:focus,
+.btn:active,
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
@@ -998,26 +1001,7 @@ hr { border-top-color: #edeaee; border-bottom: 1px solid #ffffff; margin:12px 0;
 .breadcrumbs i { color: #656268; margin-right: 3px; }
 .breadcrumbs i:not(:first-child) { margin-left: 5px; }
 
-/********** Message in login **********/
-.message
-{
-	-moz-border-radius:20px;
-	-webkit-border-radius:20px;
-	border-radius:20px;
-	padding:20px;
-	margin:auto;
-	width:500px;
-	background:url('images/black_40p.png');
-	color:#ffffff;
-	text-align:center;
-	font-weight:bold;
-	margin-top:20px;
-}
-.messages_table td
-{
-	border-top:1px solid #aaaaaa;
-	vertical-align:top;
-}
+
 
 /********** Quick Nav **********/
 .quick-nav { width: 100%; } 
@@ -1612,6 +1596,7 @@ input:checked + .switch.dark-grey, .switch.dark-grey i {
 	padding-left: 10px;
 }
 .widget-content textarea {
+	height: 78px;
 	padding-left: 10px;
 	padding-top: 7px;
 	resize: none;
