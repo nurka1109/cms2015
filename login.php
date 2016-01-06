@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+// include('config.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -60,6 +60,7 @@ else
 			$username = mysql_real_escape_string($_POST['username']);
 			$ousername = $username;
 		}
+		/*
 		if($req=mysql_query('select admin_name,admin_password,image_path from pbs_admin,gallery_photos where admin_username="'.$username.'" and photo_id=id') and mysql_num_rows($req)>0){
 			$dn=mysql_fetch_array($req);
 			if($password==$dn['admin_password']){
@@ -111,7 +112,8 @@ else
 			$message = "The username or password is incorrect! ";
 			make_alert($message);
 		}
-	}}
+	}*/
+	}
 	else
 	{
 		$form = true;
