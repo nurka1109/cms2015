@@ -1,21 +1,17 @@
 <?php
-//We start sessions
-session_start();
+  class Db {
+    private static $instance = NULL;
 
-//We log to the DataBase
-mysql_connect('localhost', 'root', '');
-mysql_select_db('cms_sks');
-mysql_set_charset("UTF8");
-header('Content-type: text/html; charset=utf-8');
+    private function __construct() {}
 
-//Top site root URL
-$url_root = 'http://www.example.com/';
+    private function __clone() {}
 
-/******************************************************
------------------Optional Configuration----------------
-******************************************************/
-
-$url_home = 'login.php';
-
-
+    public static function getInstance() {
+      if (!isset(self::$instance)) {
+        $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+        self::$instance = new PDO('mysql:host=localhost;dbname=cms_sks', 'root', '', $pdo_options);
+      }
+      return self::$instance;
+    }
+  }
 ?>
