@@ -1,9 +1,10 @@
 <?php 
-	//include_once("config.php");
-	include_once("controller/Controller.php");
+	
+header('Location: login.php');
+	// include_once("controller/Controller.php");
 
-	$controller = new Controller();
-	$controller->invoke();
-	echo"Welcome Home";
+	// $controller = new Controller();
+	// $controller->invoke();
+	// echo"Welcome Home";
 
 ?>
